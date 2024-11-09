@@ -1,6 +1,6 @@
 function toggleMenu() {
-  const menu = document.querySelector('.mobile-menu');
-  menu.classList.toggle('hidden');
+  const menu = document.querySelector(".mobile-menu");
+  menu.classList.toggle("hidden");
 }
 
 // swiper Slider
@@ -37,45 +37,39 @@ new Swiper(".mySwiper2", {
 });
 
 // Get all tab elements and content blocks
-const tabs = document.querySelectorAll(".tab");
-const tabContents = document.querySelectorAll(".tab-content");
-
-tabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    const target = tab.getAttribute("data-tab");
+$(document).ready(function() {
+  $(".tab").on("click", function() {
+    const target = $(this).data("tab");
 
     // Remove active classes
-    tabs.forEach((t) => t.classList.remove("active-tab"));
-    tabContents.forEach((content) => content.classList.add("hidden"));
+    $(".tab").removeClass("active-tab");
+    $(".tab-content").addClass("hidden");
 
     // Add active classes
-    tab.classList.add("active-tab");
-    document.getElementById(target).classList.remove("hidden");
+    $(this).addClass("active-tab");
+    $("#" + target).removeClass("hidden");
   });
 });
 
 
-
-
-
 // Detect when the element is in view and apply the animation
 function isInView(element) {
-  const rect = element.getBoundingClientRect();
-  return rect.top >= 0 && rect.bottom <= window.innerHeight;
+  const rect = $(element)[0].getBoundingClientRect();
+  return rect.top >= 0 && rect.bottom <= $(window).height();
 }
 
 function checkScroll() {
-  const elements = document.querySelectorAll('.fade-up-scroll');
-  elements.forEach(element => {
-    if (isInView(element)) {
-      element.classList.add('show'); // Apply the show class to trigger the animation
+  $(".fade-up-scroll").each(function() {
+    if (isInView(this)) {
+      $(this).addClass("show"); // Apply the show class to trigger the animation
     }
   });
 }
 
 // Check scroll position on load and when scrolling
-window.addEventListener('scroll', checkScroll);
-window.addEventListener('load', checkScroll);
+$(window).on("scroll", checkScroll);
+$(window).on("load", checkScroll);
 
 // Initial check in case elements are already in view when the page loads
 checkScroll();
+

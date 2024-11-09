@@ -605,6 +605,10 @@ p{
   top: 0px;
 }
 
+.z-40{
+  z-index: 40;
+}
+
 .z-50{
   z-index: 50;
 }
@@ -654,6 +658,10 @@ p{
   aspect-ratio: 137/100;
 }
 
+.h-3{
+  height: 0.75rem;
+}
+
 .h-6{
   height: 1.5rem;
 }
@@ -670,12 +678,20 @@ p{
   height: 100%;
 }
 
+.w-3{
+  width: 0.75rem;
+}
+
 .w-6{
   width: 1.5rem;
 }
 
 .w-\[186px\]{
   width: 186px;
+}
+
+.w-\[850px\]{
+  width: 850px;
 }
 
 .w-full{
@@ -720,6 +736,10 @@ p{
 
 .gap-1\.5{
   gap: 0.375rem;
+}
+
+.gap-12{
+  gap: 3rem;
 }
 
 .gap-2{
@@ -834,6 +854,10 @@ p{
   background-color: rgb(254 191 0 / var(--tw-bg-opacity));
 }
 
+.bg-opacity-55{
+  --tw-bg-opacity: 0.55;
+}
+
 .bg-cover{
   background-size: cover;
 }
@@ -885,11 +909,6 @@ p{
 .px-8{
   padding-left: 2rem;
   padding-right: 2rem;
-}
-
-.py-16{
-  padding-top: 4rem;
-  padding-bottom: 4rem;
 }
 
 .py-2{
@@ -1080,6 +1099,11 @@ p{
   color: rgb(10 20 37 / var(--tw-text-opacity));
 }
 
+.text-red{
+  --tw-text-opacity: 1;
+  color: rgb(189 31 23 / var(--tw-text-opacity));
+}
+
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1195,6 +1219,18 @@ body {
   background-color: rgb(181 43 29 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.block-pad{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+@media (min-width: 1024px){
+  .block-pad{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
 }
 
 /* Define the fade-up animation */
@@ -1347,6 +1383,10 @@ body {
     display: none;
   }
 
+  .lg\:w-\[850px\]{
+    width: 850px;
+  }
+
   .lg\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1357,6 +1397,10 @@ body {
 
   .lg\:grid-cols-5{
     grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .lg\:gap-28{
+    gap: 7rem;
   }
 
   .lg\:space-y-0 > :not([hidden]) ~ :not([hidden]){
@@ -1521,10 +1565,6 @@ body {
   line-height: 1.75rem;
 }
 
-.\[\&\>p\]\:font-bold>p{
-  font-weight: 700;
-}
-
 .\[\&\>p\]\:font-normal>p{
   font-weight: 400;
 }
@@ -1535,10 +1575,6 @@ body {
 
 .\[\&\>p\]\:leading-\[150\%\]>p{
   line-height: 150%;
-}
-
-.\[\&\>p\]\:leading-\[160\%\]>p{
-  line-height: 160%;
 }
 
 .\[\&\>p\]\:leading-\[162\%\]>p{
@@ -1561,11 +1597,6 @@ body {
   letter-spacing: -0.025em;
 }
 
-.\[\&\>p\]\:text-red>p{
-  --tw-text-opacity: 1;
-  color: rgb(189 31 23 / var(--tw-text-opacity));
-}
-
 .\[\&\>p\]\:text-white>p{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1575,11 +1606,6 @@ body {
   .lg\:\[\&\>p\]\:text-2xl>p{
     font-size: 1.5rem;
     line-height: 2rem;
-  }
-
-  .lg\:\[\&\>p\]\:text-xl>p{
-    font-size: 1.25rem;
-    line-height: 1.75rem;
   }
 }
 

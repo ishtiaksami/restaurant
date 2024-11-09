@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/assets/css/swiper.css" />
+    <link rel="stylesheet" href="/assets/css/swiper.min.css" />
     <link rel="stylesheet" href="/output/output.css" />
     <link rel="stylesheet" href="/assets/css/tailwind.css" />
     <link rel="stylesheet" href="/assets/css/custom.css" />
@@ -61,7 +61,7 @@
             <div
               class="hidden lg:flex items-center space-x-10 [&>*]:text-white [&>*]:text-base [&>*]:font-medium"
             >
-              <a href=""> Home </a>
+              <a href="" > Home </a>
               <a href=""> About </a>
               <a href=""> Portfolio </a>
               <a href=""> Clients </a>
@@ -146,14 +146,14 @@
     <!-- End of the header block -->
 
     <!-- Start of the header Banner block -->
-    <section class="py-16 bg-red text-white">
+    <section class="block-pad bg-red text-white">
       <div class="holder">
-        <div class="grid lg:grid-cols-2 items-center">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-28 items-center">
           <div
-            class="pb-8 lg:pb-0 space-y-4 text-xl lg:[&>p]:text-2xl [&>p]:leading-[1.33]"
+            class="pb-8 lg:pb-0 space-y-4 text-xl lg:[&>p]:text-2xl [&>p]:leading-[1.33] "
           >
             <h1
-              class="lg:text-[120px] text-5xl leading-[108%] font-bebas font-bold"
+              class="lg:w-[850px]  bg-red bg-opacity-55 relative z-40 lg:text-[120px] text-5xl leading-[108%] font-bebas font-bold bg-"
             >
               Taste the authentic Saudi cuisine
             </h1>
@@ -168,7 +168,7 @@
           </div>
 
           <div class="">
-            <img src="/assets/img/image.jpg" alt="" />
+            <img src="/assets/img/image.jpg" alt="" class="w-full h-full object-cover" />
           </div>
         </div>
       </div>
@@ -176,15 +176,18 @@
     <!-- End of the header Banner block -->
 
     <!-- Start of the Card Slider Block -->
-    <section class="py-16 bg-bgColor">
+    <section class="block-pad bg-bgColor">
       <div class="holder">
         <div
           class="flex items-center pb-16 [&>p]:text-white [&>p]:text-base [&>p]:leading-[150%] [&>p]:font-normal"
         >
-          <div
-            class="fade-up-scroll space-y-4 lg:[&>p]:text-xl [&>p]:text-base [&>p]:font-bold [&>p]:leading-[160%] [&>p]:text-red"
-          >
-            <p>Crispy, Every Bite Taste</p>
+          <div class="fade-up-scroll space-y-4">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 bg-red block"></span>
+              <span class="text-red text-xl font-roboto font-bold leading-32"
+                >Crispy, Every Bite Taste</span
+              >
+            </div>
             <h2 class="text-40 lg:text-52 font-bold leading-none">
               POPULAR FOOD ITEMS
             </h2>
@@ -391,7 +394,7 @@
 
     <!-- Start of the Tab block -->
     <section
-      class="py-16 relative before:bg-[url(/assets/img/tabRight.jpg)] before:bg-right before:bottom-[134px] before:right-0 before:bg-no-repeat before:absolute before:w-[363px] before:h-[340px]"
+      class="block-pad relative before:bg-[url(/assets/img/tabRight.jpg)] before:bg-right before:bottom-[134px] before:right-0 before:bg-no-repeat before:absolute before:w-[363px] before:h-[340px]"
     >
       <div class="holder">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -623,7 +626,7 @@
 
     <!-- Start Of the form block -->
     <section
-      class="py-16 bg-cover bg-no-repeat"
+      class="block-pad bg-cover bg-no-repeat"
       style="background-image: url('/assets/img/frame.jpg')"
     >
       <div class="holder">
@@ -695,15 +698,18 @@
     <!-- End of the form block -->
 
     <!-- Start of the Text & media Slider block  -->
-    <section class="py-16 bg-bgColor">
+    <section class="block-pad bg-bgColor">
       <div class="holder">
         <div
           class="flex items-center pb-16 [&>p]:text-white [&>p]:text-base [&>p]:leading-[150%] [&>p]:font-normal"
         >
-          <div
-            class="fade-up-scroll space-y-4 [&>p]:text-xl [&>p]:font-bold [&>p]:leading-[160%] [&>p]:text-red"
-          >
-            <p>Crispy, Every Bite Taste</p>
+          <div class="fade-up-scroll space-y-4">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 bg-red block"></span>
+              <span class="text-red text-xl font-roboto font-bold leading-32"
+                >Crispy, Every Bite Taste</span
+              >
+            </div>
             <h2 class="text-[52px] font-bold leading-none">
               What Some of my Customers Say
             </h2>
@@ -978,8 +984,8 @@
       </div>
     </footer>
 
-    <script src="/assets/js/swiper.js"></script>
-    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/swiper.min.js"></script>
+    <script src="/assets/js/jquery.min.js"></script>
     <script src="/assets/js/script.js"></script>
   </body>
 </html>
